@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: '/users', pathMatch: 'full' },
   { path: 'users', component: UserListComponent, title: "An App for Users" },
-  { path: 'users/:id', component: UserDetailsComponent, title: "Users Details" } // Route with parameter ':id'
+  { path: 'users/:id', component: UserDetailsComponent, title: "User Details" } // Route with parameter ':id'
 ]
 
 @NgModule({
@@ -20,7 +20,6 @@ const routes: Routes = [
     UserListComponent,
     UserDetailsComponent
   ],
-  // imports: [BrowserModule, HttpClientModule, [RouterModule.forRoot(routes)]],
   imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [],

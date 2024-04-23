@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +8,6 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   @Output() searchUser = new EventEmitter<any>();
 
-  // constructor(private router: Router) {}
   constructor() {}
 
   ngOnInit(): void {}

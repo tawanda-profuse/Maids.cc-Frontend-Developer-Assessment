@@ -1,7 +1,7 @@
 {
-  "name": "angular.io-example",
+  "name": "maids.cc frontend developer assessment",
   "version": "0.0.0",
-  "description": "Example project from an angular.io guide.",
+  "description": "A project from Maids.css to assess candidates that applied for the Frontend Developer position.",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
