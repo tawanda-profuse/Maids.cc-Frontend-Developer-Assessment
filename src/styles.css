@@ -1,10 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    --primary: #ffff00;
+    --secondary: #9acd32;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(200, 200, 200, 0.7);
 }
 
 dialog {
@@ -17,7 +20,6 @@ dialog {
     text-align: center;
     display: grid;
     align-items: center;
-    font-size: 4rem;
     padding: 2rem 0;
     border-radius: 1rem;
     border: none;
@@ -25,8 +27,17 @@ dialog {
 }
 
 dialog i {
-    animation: spinner 1.5s linear 0s infinite forwards normal;
+    font-size: 4rem;
     color: navy;
+}
+
+dialog .fas.fa-spinner {
+    animation: spinner 1.5s linear 0s infinite forwards normal;
+}
+
+dialog p {
+    margin: 1rem auto;
+    font-style: italic;
 }
 
 @keyframes spinner {

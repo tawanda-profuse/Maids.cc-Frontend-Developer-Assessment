@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,18 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  searchTerm: any | null = null;
+  @Output() searchUser = new EventEmitter<any>();
 
-  constructor(private router: Router) {}
+  // constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
-  onSubmit(): void {
-    if (this.searchTerm !== null) {
-      const userId = +this.searchTerm; // Convert searchTerm to number
-      if (!isNaN(userId)) {
-        this.router.navigateByUrl(`/users/${userId}`);
-      }
-    }
+  onSearchInputChange(event: any): void {
+    const userId = parseInt(event.target.value.trim(), 10);
+    this.searchUser.emit(userId);
   }
 }

@@ -1,7 +1,12 @@
 header{
   height: 50vh;
   padding: 2rem;
-  background-color: yellow;
+  background-color: var(--secondary);
+  background: -webkit-linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
+background: -moz-linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
+background: -o-linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
+background: linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
+  background-size:100px 100px;
 }
 
 .wrapper{
@@ -17,23 +22,25 @@ header{
     font-size: 3rem;
     text-decoration: underline;
     text-decoration-style: wavy;
+    color: navy;
   }
 
   input{
     border: none;
     outline: none;
-    border-bottom: 0.2rem solid gray;
-    transition: 0.4s ease all;
+    border-bottom: 0.2rem solid black;
+    transition: 0.2s ease all;
     background-color: inherit;
     width: 50%;
     padding: 1rem;
-    color: green;
+    background-color: white;
     font-size: 1rem;
+    border-radius: 1rem;
   }
-
+  
   input:focus{
     border-bottom: 0.2rem solid orangered;
-    translate: 0 20%;
+    transform: scaleX(1.1);
   }
 }
 

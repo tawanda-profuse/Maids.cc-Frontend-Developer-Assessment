@@ -10,6 +10,7 @@ import { User } from '../models/user';
 })
 export class UserListComponent implements OnInit {
   users: User[] = [];
+  filteredUsers: User[] = [];
   currentPage = 1;
 
   constructor(private httpService: HttpService, private router: Router) {}
@@ -22,12 +23,21 @@ export class UserListComponent implements OnInit {
     this.httpService.getUsers(page).subscribe(
       users => {
         this.users = users;
+        this.filteredUsers = [...this.users]; // Initialize filteredUsers with all users
         this.currentPage = page;
       },
       error => {
         console.error('Error loading users:', error);
       }
     );
+  }
+
+  filterUsers(userId: any): void {
+    if (!isNaN(userId)) {
+      this.filteredUsers = this.users.filter(user => user.id === userId);
+    } else {
+      this.filteredUsers = [...this.users]; // Reset to all users if input is not a valid number
+    }
   }
 
   viewUserDetails(userId: number): void {

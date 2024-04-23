@@ -1,14 +1,16 @@
-<dialog *ngIf="!user" open="true"><i class="fas fa-spinner"></i></dialog>
+<dialog *ngIf="!user" open="true">
+  <i class="fas fa-spinner"></i>
+  <p>Loading data...</p>
+</dialog>
 <div class="user-details" *ngIf="user">
-    <h2>User Details</h2>
-    <div>
-      <img [src]="user.avatar" alt="User Avatar" class="avatar">
-      <div>
-        <p><strong>{{ user.first_name }} {{ user.last_name }}</strong></p>
-        <p>ID: {{ user.id }}</p>
-        <p>Email: {{ user.email }}</p>
-      </div>
+  <button (click)="goBack()"><i class="fas fa-arrow-left"></i> Back to User List</button>
+  <div>
+    <h1>User Details</h1>
+    <img [src]="user.avatar" alt="User Avatar" class="avatar">
+    <div class="meta-data">
+      <h2><strong>{{ user.first_name }} {{ user.last_name }}</strong></h2>
+      <p><strong>User Number</strong>: {{ user.id }}</p>
+      <p><strong>Email</strong>: <a href="mailto:{{user.email}}">{{ user.email }}</a></p>
     </div>
-    <button (click)="goBack()">Back to User List</button>
   </div>
-  
+</div>
