@@ -22,6 +22,7 @@ header {
     font-size: 3rem;
     text-decoration: underline;
     text-decoration-style: wavy;
+    text-underline-offset: 1rem;
     color: navy;
   }
 
@@ -41,5 +42,11 @@ header {
   input:focus {
     border-bottom: 0.2rem solid orangered;
     transform: scaleX(1.1);
+  }
+}
+
+@media (max-width: 768px){
+  .wrapper input{
+    width: 100%;
   }
 }
