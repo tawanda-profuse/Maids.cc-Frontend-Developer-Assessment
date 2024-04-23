@@ -39,7 +39,8 @@
     align-items: center;
     justify-content: space-between;
     width: 20%;
-    margin: auto;
+    margin: 2rem auto;
+    border-bottom: 0.3rem solid black;
 
     span {
         text-decoration: underline;
@@ -53,7 +54,6 @@
         font-size: 1.5rem;
         cursor: pointer;
         transition: 0.2s ease all;
-        /* background-color: #ccc; */
         background-color: rgba(200, 200, 200, 0.7);
         box-shadow: 0 0.2rem 0.2rem 0.1rem gray;
         

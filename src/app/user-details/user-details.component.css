@@ -2,7 +2,7 @@
     margin: 2rem auto 4rem;
     width: 50vw;
     padding: 2rem;
-    box-shadow: 0 0.8rem 0.5rem 0.5rem gray;
+    box-shadow: 0 0.3rem 0.3rem 0.3rem gray;
     background-color: #fff;
     border-radius: 0.5rem;
     
@@ -44,4 +44,9 @@
     width: 50%;
     flex-direction: column;
     gap: 2rem;
+
+    article{
+        font-family: serif;
+        font-size: 1.2rem;
+    }
 }

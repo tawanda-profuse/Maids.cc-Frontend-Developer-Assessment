@@ -9,8 +9,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/users', pathMatch: 'full' },
-  { path: 'users', component: UserListComponent },
-  { path: 'users/:id', component: UserDetailsComponent } // Route with parameter ':id'
+  { path: 'users', component: UserListComponent, title: "An App for Users" },
+  { path: 'users/:id', component: UserDetailsComponent, title: "Users Details" } // Route with parameter ':id'
 ]
 
 @NgModule({
