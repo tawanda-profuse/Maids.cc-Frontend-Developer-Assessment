@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from '../services/users.service';
 import { User } from '../models/user';
 
@@ -13,10 +13,13 @@ export class UserListComponent implements OnInit {
   filteredUsers: User[] = [];
   currentPage = 1;
 
-  constructor(private httpService: HttpService, private router: Router) {}
+  constructor(private httpService: HttpService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.loadUsers(this.currentPage);
+    this.route.queryParams.subscribe(params => {
+      const page = +params['page'] || 1; // Get page from query params, default to 1
+      this.loadUsers(page);
+    });
   }
 
   loadUsers(page: number): void {
@@ -25,11 +28,21 @@ export class UserListComponent implements OnInit {
         this.users = users;
         this.filteredUsers = [...this.users]; // Initialize filteredUsers with all users
         this.currentPage = page;
+        this.updateUrlParams(page); // Update URL with page parameter
       },
       error => {
         console.error('Error loading users:', error);
       }
     );
+
+  }
+
+  private updateUrlParams(page: number): void {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { page: page },
+      queryParamsHandling: 'merge' // Retain existing query params
+    });
   }
 
   filterUsers(userId: any): void {

@@ -1,12 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
-
-import { AppComponent } from './app.component'
-import { HeaderComponent } from './header/header.component'
-import { UserListComponent } from './user-list/user-list.component'
-import { HttpClientModule } from '@angular/common/http'
-import { UserDetailsComponent } from './user-details/user-details.component'
-import { RouterModule, Routes } from '@angular/router'
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/users', pathMatch: 'full' },
@@ -21,7 +20,8 @@ const routes: Routes = [
     UserListComponent,
     UserDetailsComponent
   ],
-  imports: [BrowserModule, HttpClientModule, [RouterModule.forRoot(routes)]],
+  // imports: [BrowserModule, HttpClientModule, [RouterModule.forRoot(routes)]],
+  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
