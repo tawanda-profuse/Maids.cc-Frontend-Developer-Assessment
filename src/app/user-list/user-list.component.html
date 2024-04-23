@@ -7,6 +7,12 @@
     <i class="fas fa-spinner"></i>
     <p>Loading data...</p>
 </dialog>
+<div class="pagination">
+    <button (click)="loadUsers(currentPage - 1)" [disabled]="currentPage === 1"><i
+            class="fas fa-arrow-left"></i></button>
+    <span>Page {{ currentPage }}</span>
+    <button (click)="loadUsers(currentPage + 1)"><i class="fas fa-arrow-right"></i></button>
+</div>
 <section id="users-list">
     <a class="card" *ngFor="let user of filteredUsers" (click)="viewUserDetails(user.id)">
         <img [src]="user.avatar" alt="Avatar image">
@@ -16,9 +22,3 @@
         </div>
     </a>
 </section>
-<div class="pagination">
-    <button (click)="loadUsers(currentPage - 1)" [disabled]="currentPage === 1"><i
-            class="fas fa-arrow-left"></i></button>
-    <span>Page {{ currentPage }}</span>
-    <button (click)="loadUsers(currentPage + 1)"><i class="fas fa-arrow-right"></i></button>
-</div>

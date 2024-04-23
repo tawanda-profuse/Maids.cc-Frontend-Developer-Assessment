@@ -1,11 +1,12 @@
 #users-list {
     margin: 2rem auto;
-    max-width: 70vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 30%);
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 4rem;
 
     a {
         box-shadow: 0 0.5rem 0.5rem gray;
@@ -14,12 +15,17 @@
         padding: 1rem;
         text-decoration: none;
         background-color: #fff;
-    }
+        flex: 1;
+        
+        &:hover {
+            translate: 0 5%;
+            scale: 0.9;
+            cursor: pointer;
+        }
 
-    a:hover {
-        translate: 0 5%;
-        scale: 0.9;
-        cursor: pointer;
+        &:only-child{
+            flex: 0.3;
+        }
     }
 
     img {
@@ -70,5 +76,17 @@
             background-color: var(--primary);
             box-shadow: none;
         }
+    }
+}
+
+@media (max-width: 1101px){
+    .pagination{
+        width: 50%;
+    }
+}
+
+@media (max-width: 947px){
+    #users-list a:only-child{
+        flex: 1;
     }
 }

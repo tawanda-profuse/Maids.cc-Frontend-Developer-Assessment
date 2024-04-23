@@ -1,15 +1,15 @@
-header{
+header {
   height: 50vh;
   padding: 2rem;
   background-color: var(--secondary);
   background: -webkit-linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
-background: -moz-linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
-background: -o-linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
-background: linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
-  background-size:100px 100px;
+  background: -moz-linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
+  background: -o-linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
+  background: linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 75%, var(--primary) 75%, var(--primary));
+  background-size: 100px 100px;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,14 +18,14 @@ background: linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var
   height: 100%;
   gap: 6rem;
 
-  h1{
+  h1 {
     font-size: 3rem;
     text-decoration: underline;
     text-decoration-style: wavy;
     color: navy;
   }
 
-  input{
+  input {
     border: none;
     outline: none;
     border-bottom: 0.2rem solid black;
@@ -37,10 +37,9 @@ background: linear-gradient(45deg, var(--secondary) 25%, var(--primary) 25%, var
     font-size: 1rem;
     border-radius: 1rem;
   }
-  
-  input:focus{
+
+  input:focus {
     border-bottom: 0.2rem solid orangered;
     transform: scaleX(1.1);
   }
 }
-
