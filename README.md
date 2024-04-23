@@ -2,11 +2,11 @@
 
 This project is my solution to the Frontend Developer job assessment from Maids.cc. The project should be implemented using Angular 7+ and Angular CLI as the foundation. The project meets the following requirements:
 
-1. **Project Setup**: The project was created using Angular CLI 7+.
+1. **Project Setup**: The project was created using Angular 16.2.2.
 
 2. **Page Layout**: A header and a horizontally centered list styled with CSS Flexbox as well as pagination.
 
-3. **Data Retrieval**: Utilizes HTTP to fetch all users data and details for a single user.
+3. **Data Retrieval**: Utilizes HTTP to fetch all user data and details for a single user.
 
 4. **Navigation**: Clicking the user cards navigates to a new page with the users details.
 
