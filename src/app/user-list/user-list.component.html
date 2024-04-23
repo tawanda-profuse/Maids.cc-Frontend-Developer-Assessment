@@ -1,0 +1,16 @@
+<app-header></app-header>
+<dialog *ngIf="users.length === 0" open="true"><i class="fas fa-spinner"></i></dialog>
+<section id="users-list">
+    <a class="card" *ngFor="let user of users" (click)="viewUserDetails(user.id)">
+        <img [src]="user.avatar" alt="Avatar image">
+        <div class="user-info">
+            <h2>{{user.first_name}} {{user.last_name}}</h2>
+            <h3>ID: {{user.id}}</h3>
+        </div>
+    </a>
+    <div class="pagination">
+        <button (click)="loadUsers(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }}</span>
+        <button (click)="loadUsers(currentPage + 1)">Next</button>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+<dialog *ngIf="!user" open="true"><i class="fas fa-spinner"></i></dialog>
+<div class="user-details" *ngIf="user">
+    <h2>User Details</h2>
+    <div>
+      <img [src]="user.avatar" alt="User Avatar" class="avatar">
+      <div>
+        <p><strong>{{ user.first_name }} {{ user.last_name }}</strong></p>
+        <p>ID: {{ user.id }}</p>
+        <p>Email: {{ user.email }}</p>
+      </div>
+    </div>
+    <button (click)="goBack()">Back to User List</button>
+  </div>
+  
