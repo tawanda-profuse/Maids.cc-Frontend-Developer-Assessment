@@ -1,6 +1,6 @@
 # About This Project
 
-This project is my solution to the Frontend Developer job assessment from Maids.cc. The project should be implemented using Angular 7+ and Angular CLI as the foundation. The project meets the following requirements:
+This project is a user interface that displays data from a public API. The project is implemented using Angular 7+ and Angular CLI as the foundation. The project meets the following requirements:
 
 1. **Project Setup**: The project was created using Angular 16.2.2.
 
